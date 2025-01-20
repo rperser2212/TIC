@@ -8,41 +8,55 @@
         <h1> Mi cuarta WEB</h1>
         <script>
         // switch
-        var dia = prompt ("Escribe un numero del 1 al 7: ");
-        var diaNombre = "ENERO";
+        var dia = prompt ("Escribe un numero del 1 al 12: ");
+        //var estacionNombre = "ENERO";
        dia = Number(dia);
         switch (dia) {
             case 1:
-                diaNombre = "Lunes"
+                estacionNombre = "Invierno"
                 break
                
             case 2:
-                diaNombre = "Martes"
+                 estacionNombre = "Invierno"
                 break
                 
             case 3:
-                diaNombre = "Miércoles"
+                 estacionNombre = "Invierno"
                 break
                 
             case 4:
-                diaNombre = "Jueves"
+                 estacionNombre = "Primavera"
                 break
             case 5:
-                diaNombre = "Viernes"
+                 estacionNombre = "Primavera"
                 break
             case 6:
-                diaNombre = "Sábado"
+                 estacionNombre = "Primavera"
                 break
             case 7:
-                diaNombre = "Domingo"
+                 estacionNombre = "Verano"
                 break
-               
+               case 8:
+                 estacionNombre = "Verano"
+                break
+                case 9:
+                 estacionNombre = "Verano"
+                break
+                case 10:
+                 estacionNombre = "Otoño"
+                break
+                case 11:
+                 estacionNombre = "Otoño"
+                break
+                case 12:
+                 estacionNombre = "Invierno"
+                break
             default:
             diaNombre = "Número de día incorrecto"
         }
 
         document.write ("<br>");
-        document.write ("<h3 id='demo1'>El dia de la semana correspondiente es: " +diaNombre);
+        document.write ("<h3 id='demo1'>El dia de la semana correspondiente es: " +estacionNombre);
         document.write ("</h3>");
         document.write ("<br><br><br>");
     </script>
