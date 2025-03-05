@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Mi Página para calcular todos los numeros pares inferiores a una cifra </title> 
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>         
+        <script src="pedirNumero.js"></script>
+        <script src="comprobarsiespar.js"></script>
+        <script> 
+            var espar;
+            var numero;
+            var i;
+            numero = pedirNumeroEnRango(2, 1024);
+            document.write ("<h1> Mi Página para calcular todos los numeros pares inferiores a " +numero+ "</h1>");
+            document.write("<h4>Los numeros pares entre 2 y " +numero+ "  son: </h4>");
+            for (i = 2; i <= numero ; i= i + 1)
+                {
+                esPrimo = comprobarespar(i);
+                if (espar == true) {
+                          document.write (i + " Es un número par.<br>");
+                        } 
+                    else
+                    {
+                          document.write (i + " NO ES un numero par.<br>");
+                        } 
+                    
+                 } 
+          </script>
+</body>
+</html>
