@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title> Web sobre array</title>
+  </head>
+  <body>
+  <script src="pedirnumero.js"> </script>
+    <script>
+    var amigos = [];
+    var i;
+    var num_amigos;
+    var amigo;
+
+    favoritos = pedirNumeroEnRangoMejorado ("Dime: ¿Cuantos amigos tienes? entre ",1,7);
+    for (i=1; i <= num_amigos; i = i+1 )
+      {
+          amigo = pedirNumeroEnRangoMejorado ("Escribe el nombre de tus ammigos:");
+          amigos.push (amigo);
+      }
+     document.write ("Los amigos quen has introducido son: ", amigos);      
+        document.write("<span style='color:blue; font-size: 20px; font-weight: bold;'>" + numeros + "</span>");
+    </script> 
+  </body>
+</html>
