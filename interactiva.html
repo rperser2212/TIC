@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Botón Púlsame</title>
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+    <button> Botón feo</button>    
+    <button id="botonInofensivo">Botón inofensivo</button>
+    <button onclick="alert('¡Has pulsado el botón!!!!')">Púlsame!!!!</button>
+    <script>
+        alert('BIENVENIDO');
+ 
+        // Event listener para el botón "inofensivo"
+        document.getElementById('botonInofensivo').addEventListener('click', function() {
+        document.write('Botón inofensivo clickeado');
+        });
+    </script>
+</body>
+</html>
