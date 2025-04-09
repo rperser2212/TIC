@@ -36,9 +36,9 @@
 </head>
 <body>
     <h2>Calculadora Simple</h2>   
-    <input type="number" id="entrada1" placeholder="Primer número" value="13"><br>  
-    <input type="number" id="entrada2" placeholder="Segundo número" value ="666"><br>  
-    
+    <input type="number" id="entrada1" placeholder="Primer número" value="0"><br>  
+    <input type="number" id="entrada2" placeholder="Segundo número" value ="0"><br>  
+    <input type="number" id="entrada3" placeholder="Tercer número" value ="0"><br>  
     
     <button id="buttonSumar">Sumar</button>
     <button id="buttonMultiplicar">Multiplicar</button>
@@ -47,12 +47,13 @@
     
   
     <script>
-        var numero1, numero2, botonSumar, botonMultiplicar, resultado, num1, num2;
+        var numero1, numero2, numero3, botonSumar, botonMultiplicar, resultado, num1, num2, num3;
         
         document.addEventListener('DOMContentLoaded', function() {
             
             numero1 = document.getElementById('entrada1'); 
             numero2 = document.getElementById('entrada2'); 
+            numero3 = document.getElementById('entrada3'); 
             resultado = document.getElementById('resultado'); 
             botonSumar = document.getElementById('buttonSumar');
             botonMultiplicar = document.getElementById('buttonMultiplicar');
@@ -60,15 +61,19 @@
             botonSumar.addEventListener('click', function() {
                 num1 = Number(numero1.value);
                 num2 = Number(numero2.value);
+                num3 = Number(numero3.value);
+
                 
-               resultado.textContent = (num1 + " sumado a  " + num2 +" es igual a "+ (num1+num2));
+               resultado.textContent = (num1 + " sumado a  " + num2 +" sumado a "+ num3 +" es igual a "+ (num1+num2+num3));
             });
 
             botonMultiplicar.addEventListener('click', function() {
                 num1 = Number(numero1.value);
                 num2 = Number(numero2.value);
+                num3 = Number(numero3.value);
 
-                resultado.textContent = ( num1 + " multiplicado por "+ num2 + " es igual a "+ (num1*num2));
+
+                resultado.textContent = ( num1 + " multiplicado por "+ num2 + " multiplicado por "+ num3 + " es igual a "+ (num1*num2));
             });
          
         });
