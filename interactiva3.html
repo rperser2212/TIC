@@ -59,36 +59,36 @@
 </head>
 
 <body>
-    <!-- Contenedor principal -->
     <div class="contenedor">
-        <h1>¿Cómo te llamas?</h1>
+        <h1>Escribe tu numero favorito </h1>
 
-        <!-- Campo de entrada para el nombre del usuario -->
-        <input type="text" id="entradaNombre" placeholder="Teclea tú nombre aquí"><br>
+        <input type="text" id="entradaNumero" placeholder="Teclea tú numero aquí"><br>
 
-        <!-- Botón para generar el saludo -->
-        <button id="botonSaludar">Saludar</button>
+        <button id="botonPrimo">Muestrame si es primo</button>
 
-        <!-- Área donde se mostrará el mensaje -->
         <div id="mensaje"></div>
     </div>
 
-    <script>
-       
-        var nombre, mensajeDiv;
+    <script src="primos.js"></script>
+       <script>
+           
+        var numero, mensajeDiv;
+           var esPrimo
 
     
-        document.getElementById('botonSaludar').addEventListener('click', function() {
+        document.getElementById('botonPrimo').addEventListener('click', function() {
 
-            nombre = document.getElementById('entradaNombre').value;
+            nombre = document.getElementById('entradaNumero').value;
 
             mensajeDiv = document.getElementById('mensaje');
-
-            if (nombre) {
-                mensajeDiv.textContent = ("¡Hola, " + nombre + "! ¡Bienvenido a clase! 👋");
+esPrimo = comprobarsiesprimo (numero)
+            
+            if (esPrimo == true) 
+            {
+                mensajeDiv.textContent = ("¡Hola, " + numero + " ¡Es un numero primo! ");
             } 
             else {
-                mensajeDiv.textContent = ("¡Dime tú nombre para saludarte 😊!");
+                mensajeDiv.textContent = ( numero + " ¡No es un numero primo! ");
             }
         });
     </script>
