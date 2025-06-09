@@ -81,10 +81,9 @@
             if (nombre) {
                 mensajeDiv.textContent = (nombre);
             } 
-            else {
-                mensajeDiv.textContent = ("¡Dime tú nombre para saludarte !!");
-            }
-        });
+          if (nombre) { mensajeDiv.textContent = (nombre+nombre);
+        }
+            ;
     </script>
 </body>
 </html>
