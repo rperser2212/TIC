@@ -53,7 +53,7 @@
 
         /* Estilo para el mensaje de saludo */
         #mensaje {
-            margin-top: 20px;                 /* Espacio encima del mensaje */
+            margin-top: 20px;                 /* Escacapacio encima del mensaje */
             font-size: 18px;                  /* Tamaño del texto del mensaje */
             color: #444;                      /* Color gris intermedio */
         }
@@ -68,7 +68,7 @@
 
         <button id="botonSaludar">Enviar</button>
 
-        <div id="mensaje"></div>
+        <div id="mensaje"></div>caca
     </div>
     <script>
         var nombre, mensajeDiv;
@@ -79,11 +79,9 @@
             mensajeDiv = document.getElementById('mensaje');
 
             if (nombre) {
-                mensajeDiv.textContent = ("nombre");
+                mensajeDiv.textContent = (" + nombre + ");
             } 
-            else {
-                mensajeDiv.textContent = ("¡Dime tú nombre para saludartenombre !!");
-            }
+            
         });
     </script>
 </body>
