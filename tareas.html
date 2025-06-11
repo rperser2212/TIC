@@ -62,9 +62,9 @@
 
 <body>
     <div class="contenedor">
-        <h1>LISTA DE TAREAS</h1>
+        <h1>Escribe tus tareas</h1>
 
-        <input type="text" id="entradaNombre" placeholder="Escribe tus tareas aquí"><br>
+        <input type="text" id="entradaNombre" placeholder="Teclea tus tareas aquí><br>
 
         <button id="botonSaludar">Enviar</button>
 
@@ -72,16 +72,7 @@
     </div>
     <script>
         var nombre, mensajeDiv;
-var i;
-     for (i=1; i <= favoritos; i = i+1 ) 
-      {
-          nombre = prompt ("Escribe tus tareas ");
-          nombre.push (nombre);
-        
 
-      }
-     document.write ("<h3>Tus tareas son:<br> </h3>"); 
-        
         document.getElementById('botonSaludar').addEventListener('click', function() {
 
             nombre = document.getElementById('entradaNombre').value;
@@ -90,8 +81,10 @@ var i;
             if (nombre) {
                 mensajeDiv.textContent = (nombre);
             } 
-        
-            ;
+            else {
+                mensajeDiv.textContent = ("¡Dime tú nombre para saludarte !!");
+            }
+        });
     </script>
 </body>
 </html>
