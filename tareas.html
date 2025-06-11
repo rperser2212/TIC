@@ -62,11 +62,11 @@
 
 <body>
     <div class="contenedor">
-        <h1>¿Cómo te llamas?</h1>
+        <h1>Lista de Tareas</h1>
 
-        <input type="text" id="entradaNombre" placeholder="Teclea tú nombre aquí"><br>
+        <input type="text" id="entradaNombre" placeholder="Escribe tus tareas aquí"><br>
 
-        <button id="botonSaludar">Saludar</button>
+        <button id="botonSaludar">Enviar</button>
 
         <div id="mensaje"></div>
     </div>
@@ -79,7 +79,7 @@
             mensajeDiv = document.getElementById('mensaje');
 
             if (nombre) {
-                mensajeDiv.textContent = ("¡Hola, " + nombre + "! ¡Bienvenido a clase! ");
+                mensajeDiv.textContent = ("nombre");
             } 
             else {
                 mensajeDiv.textContent = ("¡Dime tú nombre para saludarte !!");
