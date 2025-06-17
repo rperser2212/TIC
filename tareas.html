@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>¡Salúdame!</title>
+    <title>Tareas.html</title>
     <style>
         /* Estilos generales para el cuerpo de la página */
         body {
@@ -25,7 +25,7 @@
             padding: 8px 15px;                /* Espaciado interno del botón */
             margin: 5px;                      /* Separación alrededor del botón */
             cursor: pointer;                  /* Cambia el cursor al pasar por encima */
-            background-color: #4CnombreAF50;        /* Fondo verde para el botón */
+            background-color: #4CAF50;        /* Fondo verde para el botón */
             color: white;                     /* Texto blanco */
             border: none;                     /* Sin borde exterior */
             border-radius: 4px;               /* Esquinas redondeadas */
@@ -33,7 +33,7 @@
 
         /* Estilo cuando el ratón pasa por encima del botón */
         button:hover {
-            background-color: #45a049;    nombre    /* Color un poco más oscuro al pasar el ratón */
+            background-color: #45a049;        /* Color un poco más oscuro al pasar el ratón */
         }
 
         /* Contenedor que envuelve todo el formulario */
@@ -45,56 +45,53 @@
             text-align: center;               /* Centrado del contenido */
         }
 
-        /* Estilo del título */
         h1 {
-            margin-bottom: 20px;              /* Espacio debajo del título */nombre
-            color: #333;                      /* Color gris oscuro para buena lectura */
+            margin-bottom: 20px;            
+            color: #333;                     
         }
 
-        /* Estilo para el mensaje de saludo */
-        #mensaje {
-            margin-top: 20px;                 /* Escacapacio encima del mensaje */
-            font-size: 18px;                  /* Tamaño del texto del mensaje */
-            color: #444;                      /* Color gris intermedio */
+        #tareasd {
+            margin-top: 20px;                 
+            font-size: 18px;                 
+            color: #444;                     
+            text-align: left;
+        }
+        h3 {
+            text-align: left;
         }
     </style>
+    <script>
+        var tareas = []; // 
+        var tarea;
+        var tareashtml;
+        function apuntarTarea(){
+            tarea = document.getElementById('entradaTarea').value;
+            if (tarea === "")
+            {
+                alert('¡No has escrito ninguna tarea!');
+            }
+            else
+            {
+                tareas.push (tarea);
+                tareashtml = '<ul>';
+                tareas.forEach((element) => {
+                      tareashtml += '<li>'+element+'</li>';
+                      });
+                tareashtml += '</ul>';
+                document.getElementById('tareasd').innerHTML = tareashtml;
+            }
+
+        }
+    </script>
 </head>
 
 <body>
     <div class="contenedor">
-        <h1>Lista de Tareas</h1>
-
-        <input type="text" id="entradaNombre" placeholder="Escribe tus tareas aquí"><br>
-
-        <button id="botonSaludar">Enviar</button>
-
-        <div id="mensaje"></div>
+        <h1>Escribe aquí tus tareas</h1>
+        <input type="text" id="entradaTarea" placeholder="Escribe una tarea nueva aquí"><br>
+        <button id="botonApuntar" onclick="apuntarTarea()">Escribir</button>
+        <h3>Tareas:</h3>
+        <div id="tareasd"></div>
     </div>
-    <script>
-        var nombre, mensajeDiv;
-        var i;
-        var favoritos;
-            favoritos = pedirNumeroEnRangoMejorado ("Tareas: ");
-          for (i=1; i <= favoritos; i = i+1 ) 
-              {
-          nombre = prompt ("Tareas");
-          nombre.push (nombre);
-        
-
-      }
-
-        document.getElementById('botonSaludar').addEventListener('click', function() {
-
-     document.write("<span style='color:blue; font-size: 20px; font-weight: bold;'>" + nombre + "</span>");
-            
-            nombre = document.getElementById('entradaNombre').value;
-            mensajeDiv = document.getElementById('mensaje');
-
-            if (nombre) {
-                mensajeDiv.textContent = (nombre);
-            } 
-            
-        });
-    </script>
 </body>
 </html>
